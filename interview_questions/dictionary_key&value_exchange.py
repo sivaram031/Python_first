@@ -5,3 +5,7 @@ for k,v in d.items():
 
 print(n)
 
+
+import os
+print(os.listdir())
+
