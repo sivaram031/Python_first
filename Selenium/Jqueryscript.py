@@ -14,10 +14,27 @@ time.sleep(5)
 t = driver.find_elements_by_xpath(("//span[contains(@class,'combo')]"))
 print(len(t))
 
-for i in t:
-    m =i.text.encode('ascii','ignore').decode('ascii')
-    if m == 'choice 5':
-        i.click()
+def values_send(option,values):
+    if not values[0]=='all':
+        for i in t:
+            print(i.text)
+            for k in range(len(values)):
+                if i.text==values[k]:
+                    i.click()
+                    break
+    else:
+        try:
+            for i in option:
+                i.click()
+
+        except Exception as e:
+            print(e)
+
+values_lst =['all']
+values_send(t,values_lst)
+
+
+#pole
 
 
 

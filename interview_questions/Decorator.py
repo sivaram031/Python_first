@@ -1,3 +1,4 @@
+
 def service(fun):
     def inner(*args):
         amt = fun(*args)               # Decorator  implementation
