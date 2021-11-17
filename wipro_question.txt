@@ -1,0 +1,1 @@
+given string S of length N, returns any palindrome which can be obtained by replacing all of the question marks in S by lower case letters in python.
